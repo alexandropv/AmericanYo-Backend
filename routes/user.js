@@ -121,6 +121,11 @@ app.put('/:id', mdAutenticacion.verificaToken, (req, res) => {
         user.email = body.email;
         user.role = body.role;
         user.quickTestPaid = body.quickTestPaid;
+        user.quickTestPaidDate = body.quickTestPaidDate;
+        user.finishQuickTest = body.finishQuickTest;
+        user.finishQuickTestDate = body.finishQuickTestDate;
+        user.boughtPackage = body.boughtPackage;
+        user.boughtPackageDate = body.boughtPackageDate;
 
 
         user.save((err, savedUser) => {

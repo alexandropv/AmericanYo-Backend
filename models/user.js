@@ -36,12 +36,37 @@ var userSchema = new Schema({
         required: true,
         default: false
     },
+    finishQuickTest: {
+        type: Boolean,
+        default: false
+    },
+    finishQuickTestDate: {
+        type: Date,
+        default: new Date(1900, 1, 1)
+    },
+    boughtPackage: {
+        type: Boolean,
+        default: false
+    },
+    boughtPackageDate: {
+        type: Date,
+        default: new Date(1900, 1, 1)
+    },
     quickTestPaid: {
         type: Boolean,
         default: false
     },
+    quickTestPaidDate: {
+        type: Date,
+        default: new Date(1900, 1, 1)
+    },
+    recEmailCount: {
+        type: Number,
+        default: 0
+    },
     date: {
-        type: Date
+        type: Date,
+        default: Date.now()
     }
 });
 
